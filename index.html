@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Jarvis Speech App</title>
+</head>
+<body>
+  <h1>🧠 Jarvis Speech App (Online Version)</h1>
+
+  <input id="text" placeholder="Enter text to speak" />
+  <button onclick="speak()">Speak</button>
+
+  <script>
+    function speak() {
+      let text = document.getElementById("text").value;
+      let speech = new SpeechSynthesisUtterance(text);
+      window.speechSynthesis.speak(speech);
+    }
+  </script>
+</body>
+</html>
