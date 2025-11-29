@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "builds": [
+    { "src": "api/speak.py", "use": "@vercel/python" }
+  ],
+  "routes": [
+    { "src": "/api/speak", "dest": "api/speak.py" },
+    { "src": "/(.*)", "dest": "/public/index.html" }
+  ]
+}
